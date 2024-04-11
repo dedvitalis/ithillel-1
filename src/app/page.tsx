@@ -1,10 +1,12 @@
-import { Headliner } from '@/components';
+import { Headliner, Calculator } from '@/components';
 
 export default function Home() {
   return (
     <>
       <Headliner />
-      <main></main>
+      <main>
+        <Calculator />
+      </main>
     </>
   );
 }

@@ -6,7 +6,7 @@ import { parse } from "node-html-parser";
 const cwd = process.cwd();
 const inputDir = path.join(cwd, "other", "svg");
 const inputDirRelative = path.relative(cwd, inputDir);
-const typeDir = path.join(cwd, "types");
+const typeDir = path.join(cwd, "src", "types");
 const outputDir = path.join(cwd, "public", "svgs");
 await fsExtra.ensureDir(outputDir);
 await fsExtra.ensureDir(typeDir);

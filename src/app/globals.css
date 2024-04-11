@@ -14,32 +14,25 @@
 }
 
 @layer components {
-    /*.test-flex {*/
-    /*    display: flex;*/
-    /*    justify-content: center;*/
+    .default-heading {
+        @apply text-_F6F7FF text-[22px] md:text-[40px] font-bold
+    }
+    .title {
+        @apply text-_1F1E25 text-[40px] font-bold
+    }
+    .default-text {
+        @apply text-base font-medium md:text-xs md:leading-8 text-_707C87
+    }
 
-    /*}*/
+    button.btn {
+        @apply px-8 py-6 rounded-[4px] font-[500] min-w-[250px];
+    }
 
-    /*.test-flex-item {*/
-    /*    width: 55px;*/
-    /*    flex-basis: 55px;*/
-    /*    flex-grow: 0;*/
-    /*}*/
+    button.primary {
+        @apply bg-_F6F7FF text-_707C87;
+    }
 
-    /*.flexwrap {*/
-    /*    display: flex;*/
-    /*    justify-content: center;*/
-    /*    height: 100px;*/
-    /*    background-color: brown;*/
-    /*}*/
-    /*.flex1 {*/
-    /*    width: 25%;*/
-    /*    background-color: blue;*/
-    /*    height: 100%;*/
-    /*}*/
-    /*.flex2 {*/
-    /*    width: 25%;*/
-    /*    background-color: green;*/
-    /*    height: 100%;*/
-    /*}*/
+    button.secondary {
+        @apply bg-_2C36F2 text-_F6F7FF text-xl;
+    }
 }
