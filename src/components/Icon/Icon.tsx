@@ -1,6 +1,6 @@
 import { type SVGProps } from 'react';
 import { cn } from '@/utils/cn';
-import { AllIconTypes } from '@/types';
+import { IconType } from '@/types';
 
 export const Icon = ({
   name,
@@ -8,7 +8,7 @@ export const Icon = ({
   className,
   ...props
 }: SVGProps<SVGSVGElement> & {
-  name: AllIconTypes;
+  name: IconType;
   childClassName?: string;
 }) => {
   return (

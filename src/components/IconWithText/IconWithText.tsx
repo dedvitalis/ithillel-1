@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components';
-import { AllIconTypes } from '@/types';
+import { IconType } from '@/types';
 
 type IconWithTextProps = {
-  icon: AllIconTypes;
+  icon: IconType;
   text: string;
   textStyle?: string;
   link: string;

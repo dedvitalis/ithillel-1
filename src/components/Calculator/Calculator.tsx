@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { TextBlock } from '@/components';
-import { buttonType } from '@/types';
+import { ButtonType } from '@/types';
 
 export const Calculator = () => {
   return (
@@ -13,7 +13,7 @@ export const Calculator = () => {
             titleStyle='title'
             text='Переважна діяльність банківської групи за останні чотири звітні квартали становить 50 і більше відсотків.'
             textStyle='text-_707C87 text-[20px] font-400 py-[27px]'
-            buttonTheme={buttonType.secondary}
+            buttonTheme={ButtonType.secondary}
             buttonTitle='Конвертувати валюту'
           />
         </div>

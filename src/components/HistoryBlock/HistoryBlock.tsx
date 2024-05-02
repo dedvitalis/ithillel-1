@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { buttonType } from '@/types/buttonTypes';
+import { ButtonType } from '@/types/buttonTypes';
 
 export const HistoryBlock = () => {
   return (

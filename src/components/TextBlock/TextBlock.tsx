@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { buttonType } from '@/types';
+import { ButtonType } from '@/types';
 import { CustomButton } from '@/components';
 import Link from 'next/link';
 
@@ -8,7 +8,7 @@ type TextBlockProps = {
   titleStyle?: string;
   text: string;
   textStyle?: string;
-  buttonTheme?: buttonType;
+  buttonTheme?: ButtonType;
   buttonTitle: string;
   link?: string;
 };

@@ -1,12 +1,12 @@
 'use client';
 import { useState, FC } from 'react';
-import { ExchangeDataType, targetType } from '@/types';
+import { ExchangeDataType, TargetType } from '@/types';
 
 interface SelectInputProps {
   currencies: string[];
   exchangeData: ExchangeDataType;
   setExchangeData: Function;
-  target: targetType;
+  target: TargetType;
 }
 
 export const SelectInput: FC<SelectInputProps> = ({ currencies, target, exchangeData, setExchangeData }) => {

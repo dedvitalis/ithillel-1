@@ -1,4 +1,4 @@
-export enum targetType {
+export enum TargetType {
   currencyFrom = 'currencyFrom',
   amountFrom = 'amountFrom',
   currencyTo = 'currencyTo',
@@ -13,7 +13,7 @@ export interface ExchangeDataType {
   currenciesData?: any;
 }
 
-export interface coursesDataType {
+export interface CoursesDataType {
   StartDate: string;
   TimeSign: string;
   CurrencyCode: string;

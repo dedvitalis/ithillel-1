@@ -1,4 +1,4 @@
-import { buttonType } from '@/types';
+import { ButtonType } from '@/types';
 import { ButtonHTMLAttributes, FC, HTMLProps, JSX } from 'react';
 
 export type ButtonThemeType = {
@@ -7,7 +7,7 @@ export type ButtonThemeType = {
 };
 
 export type customButtonType = {
-  theme?: buttonType;
+  theme?: ButtonType;
   disabled?: boolean;
   onClick?: () => void;
   children: JSX.Element;
@@ -18,7 +18,7 @@ export type customButtonType = {
 
 export const CustomButton: FC<customButtonType> = ({
   children,
-  theme = buttonType.primary,
+  theme = ButtonType.primary,
   disabled,
   onClick,
   className,

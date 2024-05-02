@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { TextBlock } from '@/components';
-import { buttonType } from '@/types';
+import { ButtonType } from '@/types';
 
 export const Headliner = () => {
   return (
@@ -24,7 +24,7 @@ export const Headliner = () => {
               <TextBlock
                 text='Обмінник валют - навчальний'
                 textStyle='text-_E0E1EA text-xl font-500 py-7 pr-12'
-                buttonTheme={buttonType.primary}
+                buttonTheme={ButtonType.primary}
                 buttonTitle='Конвертер валют'
                 link='/converter'
               />

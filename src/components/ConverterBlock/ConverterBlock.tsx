@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { CustomButton, Input, SelectInput, Icon } from '@/components';
-import { buttonType, coursesDataType, targetType, ExchangeDataType } from '@/types';
+import { ButtonType, CoursesDataType, TargetType, ExchangeDataType } from '@/types';
 
-export const ConverterBlock = ({ coursesData }: { coursesData: coursesDataType[] }) => {
+export const ConverterBlock = ({ coursesData }: { coursesData: CoursesDataType[] }) => {
   const [exchangeData, setExchangeData] = useState({
     currencyFrom: 'UAH',
     amountFrom: 0,
@@ -23,15 +23,15 @@ export const ConverterBlock = ({ coursesData }: { coursesData: coursesDataType[]
             <div className='flex items-center gap-4 mb-6'>
               <Input
                 type='number'
-                target={targetType.amountFrom}
+                target={TargetType.amountFrom}
                 setExchangeData={setExchangeData}
                 exchangeData={exchangeData}
               />
               <SelectInput
-                currencies={coursesData.map((item: coursesDataType) => item.CurrencyCodeL)}
+                currencies={coursesData.map((item: CoursesDataType) => item.CurrencyCodeL)}
                 exchangeData={exchangeData}
                 setExchangeData={setExchangeData}
-                target={targetType.currencyFrom}
+                target={TargetType.currencyFrom}
               />
             </div>
             {/*<DateInput />*/}
@@ -52,7 +52,7 @@ export const ConverterBlock = ({ coursesData }: { coursesData: coursesDataType[]
               {/*<SelectInput />*/}
             </div>
 
-            <CustomButton theme={buttonType.secondary}>
+            <CustomButton theme={ButtonType.secondary}>
               <p>Зберегти результат</p>
             </CustomButton>
           </fieldset>

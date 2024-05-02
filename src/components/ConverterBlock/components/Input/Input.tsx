@@ -1,10 +1,10 @@
 'use client';
-import { ExchangeDataType, targetType } from '@/types';
+import { ExchangeDataType, TargetType } from '@/types';
 import React from 'react';
 
 interface InputProps {
   type: string;
-  target: targetType;
+  target: TargetType;
   setExchangeData: Function;
   exchangeData: ExchangeDataType;
 }
