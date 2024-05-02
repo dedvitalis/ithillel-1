@@ -8,3 +8,4 @@ export * from './Footer/Footer';
 export * from './IconWithText/IconWithText';
 export * from './ConverterBlock/ConverterBlock';
 export * from './HistoryBlock/HistoryBlock';
+export * from '@/components/ConverterBlock/components';

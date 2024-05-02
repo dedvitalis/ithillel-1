@@ -10,9 +10,11 @@
     "build:icons": "tsx ./build-icons.mts"
   },
   "dependencies": {
+    "@tailwindcss/forms": "0.5.7",
     "next": "14.1.4",
     "react": "18",
     "react-dom": "18",
+    "react-hook-form": "7.51.3",
     "tailwind-merge": "2.2.2",
     "tsx": "4.7.1"
   },

@@ -14,10 +14,10 @@ const config: Config = {
         _F6F7FF: '#F6F7FF', //grey-white, header and footer color
         _707C87: '#707C87', //black, text color
         _2C36F2: '#2C36F2', //blue, button color
-        _1F1E25: '#1F1E25' //black
-      }
+        _1F1E25: '#1F1E25', //black
+      },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };
 export default config;
