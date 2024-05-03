@@ -9,8 +9,10 @@ export const ConverterBlock = ({ coursesData }: { coursesData: CoursesDataType[]
     currencyFrom: 'UAH',
     amountFrom: 0,
     currencyTo: 'USD',
-    amountTo: null,
+    amountTo: 0,
   });
+  
+  const currenciesList = coursesData.map((item: CoursesDataType) => item.CurrencyCodeL);
 
   return (
     <div className='flex items-center justify-center bg-_F6F7FF py-[80px]'>
@@ -28,7 +30,7 @@ export const ConverterBlock = ({ coursesData }: { coursesData: CoursesDataType[]
                 exchangeData={exchangeData}
               />
               <SelectInput
-                currencies={coursesData.map((item: CoursesDataType) => item.CurrencyCodeL)}
+                currencies={currenciesList}
                 exchangeData={exchangeData}
                 setExchangeData={setExchangeData}
                 target={TargetType.currencyFrom}
@@ -37,7 +39,7 @@ export const ConverterBlock = ({ coursesData }: { coursesData: CoursesDataType[]
             {/*<DateInput />*/}
           </fieldset>
 
-          <div className='translate-y-[100%] h-16 flex px-12'>
+          <div className='translate-y-full h-16 flex px-12'>
             <Icon name='icons/exchange-arrows' className='h-6 w-6' />
           </div>
 
@@ -45,13 +47,19 @@ export const ConverterBlock = ({ coursesData }: { coursesData: CoursesDataType[]
             <legend className='flex flex-col text-xl font-500 text-_707C87 mb-[30px]'>Хочу придбати:</legend>
 
             <div className='flex items-center gap-[15px] mb-[24px]'>
-              <input
-                readOnly
-                className='outline-none w-[220px] h-[60px] border-2 border-[_C1C2CA] text-center text-xl font-600 text-_707C87'
+              <Input
+                type='number'
+                target={TargetType.amountTo}
+                setExchangeData={setExchangeData}
+                exchangeData={exchangeData}
               />
-              {/*<SelectInput />*/}
+              <SelectInput
+                currencies={currenciesList}
+                exchangeData={exchangeData}
+                setExchangeData={setExchangeData}
+                target={TargetType.currencyTo}
+              />
             </div>
-
             <CustomButton theme={ButtonType.secondary}>
               <p>Зберегти результат</p>
             </CustomButton>
