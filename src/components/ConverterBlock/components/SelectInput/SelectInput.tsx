@@ -1,7 +1,7 @@
 'use client';
 import { useState, FC } from 'react';
 import { ExchangeDataType, TargetType } from '@/types';
-import { Icon } from "@/components";
+import { Icon } from '@/components';
 
 interface SelectInputProps {
   currencies: string[];
