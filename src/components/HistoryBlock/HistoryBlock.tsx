@@ -22,7 +22,7 @@ export const HistoryBlock = () => {
           </CustomButton>
         </div>
         <div className='w-full flex justify-between gap-y-4 flex-wrap'>
-          {exchangeHistory?.map((item, ind) => {
+          {exchangeHistory?.map((item) => {
             const date = new Date(item.lastUpdatedTime);
             const day = String(date.getDate()).padStart(2, '0');
             const month = String(date.getMonth() + 1).padStart(2, '0');
