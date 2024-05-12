@@ -5,19 +5,30 @@ export enum TargetType {
   amountTo = 'amountTo',
 }
 
-export interface ExchangeDataType {
-  currencyFrom: string;
-  amountFrom: number | null;
-  currencyTo: string;
-  amountTo: number | null;
-  currenciesData?: any;
-}
-
-export interface CoursesDataType {
+export interface BankDataType {
   StartDate: string;
   TimeSign: string;
   CurrencyCode: string;
   CurrencyCodeL: string;
-  Units: 1;
-  Amount: 1;
+  Units: number;
+  Amount: number;
+}
+
+export interface ExchangeDataType {
+  currencyFrom: string;
+  amountFrom: number;
+  currencyTo: string;
+  amountTo: number;
+  lastUpdatedTarget: TargetType;
+  lastUpdatedTime: number;
+}
+
+export interface ExchangeEventDataType extends ExchangeDataType {
+  id: string;
+}
+
+export interface ExchangeHistoryStoreType {
+  exchangeHistory: ExchangeEventDataType[];
+  addExchangeEvent: (exchangeData: ExchangeDataType) => void;
+  clearExchangeHistory: () => void;
 }

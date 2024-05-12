@@ -8,6 +8,10 @@
 <path d="M7 2L2 7L7 12" stroke="#707C87" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
 <path d="M2.00006 7.00005C4.93339 7.00005 15.3427 7.00005 20.3334 7.00005L24.0001 7.00005" stroke="#707C87" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
 </symbol>
+<symbol viewBox="0 0 17 12" fill="none" id="icons/exchange-history-arrow">
+<path d="M11.4267 11L15.7823 6L11.4267 1" stroke="#C1C2CA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15.7822 6C13.9238 6 7.32921 6 4.1674 6L1.84444 6" stroke="#C1C2CA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</symbol>
 <symbol viewBox="0 0 9 16" fill="none" id="icons/facebook-icon">
 <path d="M6 9.2H8.14286L9 6H6V4.4C6 3.576 6 2.8 7.71429 2.8H9V0.112C8.72057 0.0776001 7.66543 0 6.55114 0C4.224 0 2.57143 1.3256 2.57143 3.76V6H0V9.2H2.57143V16H6V9.2Z" fill="#1F1E25"></path>
 </symbol>

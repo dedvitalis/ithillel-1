@@ -1,5 +1,5 @@
 import { ButtonType } from '@/types';
-import { ButtonHTMLAttributes, FC, HTMLProps, JSX } from 'react';
+import { ButtonHTMLAttributes, FC, HTMLProps, JSX, MouseEvent } from 'react';
 
 export type ButtonThemeType = {
   primary: HTMLProps<HTMLElement>['className'];
@@ -9,7 +9,7 @@ export type ButtonThemeType = {
 export type customButtonType = {
   theme?: ButtonType;
   disabled?: boolean;
-  onClick?: () => void;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   children: JSX.Element;
   className?: HTMLProps<HTMLElement>['className'];
   isLoading?: boolean;

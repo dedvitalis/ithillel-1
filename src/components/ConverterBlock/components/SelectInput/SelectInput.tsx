@@ -37,7 +37,7 @@ export const SelectInput: FC<SelectInputProps> = ({ currencies, target, exchange
                 onClick={() => {
                   setCurrencySelectorOpen(false);
                   setExchangeData((s: ExchangeDataType) => {
-                    return { ...s, [target]: currency };
+                    return { ...s, [target]: currency, lastUpdate: target };
                   });
                 }}
               >

@@ -7,7 +7,7 @@ export const Calculator = () => {
   return (
     <section id='calculator' className='flex justify-around items-center py-[120px] wrapper'>
       <div className='w-3/4 flex'>
-        <div className=''>
+        <div>
           <TextBlock
             title='Конвертер валют'
             titleStyle='title'

@@ -1,1 +1,1 @@
-export * from './getCoursesData';
+export * from './getBankData';

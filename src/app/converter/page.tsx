@@ -1,13 +1,13 @@
 import { Headliner, ConverterBlock, HistoryBlock } from '@/components';
-import { getCoursesData } from '@/actions';
+import { getBankData } from '@/actions';
 
 export default async function Converter() {
-  const coursesData = await getCoursesData();
+  const bankData = await getBankData();
   return (
     <>
       <Headliner />
       <main>
-        <ConverterBlock coursesData={coursesData} />
+        <ConverterBlock bankData={bankData} />
         <HistoryBlock />
       </main>
     </>
