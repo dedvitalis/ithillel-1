@@ -22,7 +22,7 @@ export const HistoryBlock = () => {
           </CustomButton>
         </div>
         <div className='w-full flex justify-between gap-y-4 flex-wrap'>
-          {exchangeHistory?.map((item) => {
+          {exchangeHistory?.map((item, i) => {
             const date = new Date(item.lastUpdatedTime);
             const day = String(date.getDate()).padStart(2, '0');
             const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -30,7 +30,7 @@ export const HistoryBlock = () => {
             const formattedDate = `${day}.${month}.${year}`;
             return (
               <div
-                key={item.lastUpdatedTime}
+                key={item.lastUpdatedTime + i}
                 className='bg-white rounded-1 p-4 grid grid-cols-[auto_auto_54px_auto] w-[48%]'
               >
                 <p className='text-center font-400 text-lg text-_C1C2CA mr-4'>{formattedDate}</p>

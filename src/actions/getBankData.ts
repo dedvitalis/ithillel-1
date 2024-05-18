@@ -1,17 +1,16 @@
 'use server';
 
-const dataForFetch = '26.12.2023';
-const URL = `https://bank.gov.ua/NBU_Exchange/exchange?date=${dataForFetch}&json`;
+const dateForFetch = new Date();
 
-export const getBankData = async () => {
+export const getBankData = async (date = dateForFetch) => {
   let bankData;
+  const URL = `https://bank.gov.ua/NBU_Exchange/exchange?date=${formatDate(date)}&json`;
   try {
     const response = await fetch(`${URL}`);
     bankData = await response.json();
-    // const USD = copyBankData.splice(indexOfUSD, 1);
     const theVeryFirst3Currencies = [
       {
-        StartDate: '19.12.2023',
+        StartDate: formatDate(date),
         TimeSign: '0000',
         CurrencyCode: '980',
         CurrencyCodeL: 'UAH',
@@ -33,3 +32,10 @@ export const getBankData = async () => {
   }
   return bankData;
 };
+
+function formatDate(date: Date): string {
+  const day = date.getDate().toString().padStart(2, '0');
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const year = date.getFullYear();
+  return `${day}.${month}.${year}`;
+}

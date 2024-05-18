@@ -19,6 +19,7 @@ export interface ExchangeDataType {
   amountFrom: number;
   currencyTo: string;
   amountTo: number;
+  currenciesRateDate: Date;
   lastUpdatedTarget: TargetType;
   lastUpdatedTime: number;
 }
