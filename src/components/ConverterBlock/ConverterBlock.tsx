@@ -43,16 +43,17 @@ export const ConverterBlock = ({ bankData }: { bankData: BankDataType[] }) => {
   };
 
   useEffect(() => {
+    const currencyFromRate = exchangeData.currenciesRates.find(
+      (item) => item.CurrencyCodeL === exchangeData.currencyFrom,
+    )?.Amount;
+    const currencyToRate = exchangeData.currenciesRates.find(
+      (item) => item.CurrencyCodeL === exchangeData.currencyTo,
+    )?.Amount;
+    
     if (
       exchangeData.lastUpdatedTarget === TargetType.amountFrom ||
       exchangeData.lastUpdatedTarget === TargetType.currencyFrom
     ) {
-      const currencyFromRate = exchangeData.currenciesRates.find(
-        (item) => item.CurrencyCodeL === exchangeData.currencyFrom,
-      )?.Amount;
-      const currencyToRate = exchangeData.currenciesRates.find(
-        (item) => item.CurrencyCodeL === exchangeData.currencyTo,
-      )?.Amount;
       const exchangeResult = Number(
         ((exchangeData.amountFrom * Number(currencyFromRate)) / Number(currencyToRate)).toFixed(1),
       );
@@ -63,12 +64,6 @@ export const ConverterBlock = ({ bankData }: { bankData: BankDataType[] }) => {
       exchangeData.lastUpdatedTarget === TargetType.amountTo ||
       exchangeData.lastUpdatedTarget === TargetType.currencyTo
     ) {
-      const currencyFromRate = exchangeData.currenciesRates.find(
-        (item) => item.CurrencyCodeL === exchangeData.currencyFrom,
-      )?.Amount;
-      const currencyToRate = exchangeData.currenciesRates.find(
-        (item) => item.CurrencyCodeL === exchangeData.currencyTo,
-      )?.Amount;
       const exchangeResult = Number(
         ((exchangeData.amountTo * Number(currencyToRate)) / Number(currencyFromRate)).toFixed(1),
       );
