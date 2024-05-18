@@ -49,7 +49,7 @@ export const ConverterBlock = ({ bankData }: { bankData: BankDataType[] }) => {
     const currencyToRate = exchangeData.currenciesRates.find(
       (item) => item.CurrencyCodeL === exchangeData.currencyTo,
     )?.Amount;
-    
+
     if (
       exchangeData.lastUpdatedTarget === TargetType.amountFrom ||
       exchangeData.lastUpdatedTarget === TargetType.currencyFrom
