@@ -3,6 +3,7 @@ export enum TargetType {
   amountFrom = 'amountFrom',
   currencyTo = 'currencyTo',
   amountTo = 'amountTo',
+  currenciesRateDate = 'currenciesRateDate',
 }
 
 export interface BankDataType {
@@ -20,6 +21,7 @@ export interface ExchangeDataType {
   currencyTo: string;
   amountTo: number;
   currenciesRateDate: Date;
+  currenciesRates: BankDataType[];
   lastUpdatedTarget: TargetType;
   lastUpdatedTime: number;
 }
