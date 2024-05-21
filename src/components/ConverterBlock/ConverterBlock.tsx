@@ -102,6 +102,7 @@ export const ConverterBlock = ({ bankData }: { bankData: BankDataType[] }) => {
                 labelClearButton='Очистити'
                 className='date-picker'
                 value={formatDateForDatePicker(exchangeData.currenciesRateDate)}
+                maxDate={new Date()}
                 onSelectedDateChanged={(date) => {
                   handleDateChange(date);
                 }}
